@@ -1,0 +1,16 @@
+node_modules
+dist
+build
+.env
+.DS_Store
+
+postgres_data
+
+coverage
+
+.vscode
+.idea
+
+frontend/node_modules
+backend/node_modules
+admin/node_modules
