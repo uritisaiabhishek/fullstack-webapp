@@ -1,0 +1,59 @@
+{
+    "team": [
+        {
+            "name": "John Doe",
+            "position": "CEO",
+            "image": "https://dummyimage.com/206x206",
+            "bio": "John Doe is the CEO of our company.",
+            "social": {
+                "twitter": "https://twitter.com/johndoe",
+                "linkedin": "https://linkedin.com/johndoe",
+                "github": "https://github.com/johndoe"
+            }
+        },
+        {
+            "name": "Jane Doe",
+            "position": "CTO",
+            "image": "https://dummyimage.com/206x206",
+            "bio": "Jane Doe is the CTO of our company.",
+            "social": {
+                "twitter": "https://twitter.com/janedoe",
+                "linkedin": "https://linkedin.com/janedoe",
+                "github": "https://github.com/janedoe"
+            }
+        },
+        {
+            "name": "Bob Smith",
+            "position": "Developer",
+            "image": "https://dummyimage.com/206x206",
+            "bio": "Bob Smith is a developer at our company.",
+            "social": {
+                "twitter": "https://twitter.com/bobsmith",
+                "linkedin": "https://linkedin.com/bobsmith",
+                "github": "https://github.com/bobsmith"
+            }
+        },
+        {
+            "name": "Alice Johnson",
+            "position": "Designer",
+            "image": "https://dummyimage.com/206x206",
+            "bio": "Alice Johnson is a designer at our company.",
+            "social": {
+                "twitter": "https://twitter.com/alicejohnson",
+                "linkedin": "https://linkedin.com/alicejohnson",
+                "github": "https://github.com/alicejohnson"
+            }
+        },
+        {
+            "name": "Charlie Brown",
+            "position": "Manager",
+            "image": "https://dummyimage.com/206x206",
+            "bio": "Charlie Brown is a manager at our company.",
+            "social": {
+                "twitter": "https://twitter.com/charliebrown",
+                "linkedin": "https://linkedin.com/charliebrown",
+                "github": "https://github.com/charliebrown"
+            }
+        }
+    ]
+}

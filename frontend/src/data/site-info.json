@@ -1,0 +1,19 @@
+{
+    "siteName": "My Website",
+    "contactEmail": "contact@mywebsite.com",
+    "contactPhone": "+1-555-555-5555",
+    "socialLinks": [
+        {
+            "name": "twitter",
+            "url": "https://twitter.com/mywebsite"
+        },
+        {
+            "name": "facebook",
+            "url": "https://facebook.com/mywebsite"
+        },
+        {
+            "name": "linkedin",
+            "url": "https://linkedin.com/mywebsite"
+        }
+    ]
+}
