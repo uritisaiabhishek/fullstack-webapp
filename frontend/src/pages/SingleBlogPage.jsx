@@ -1,5 +1,7 @@
 import { useParams } from "react-router-dom";
 
+import api from "../lib/api";
+
 function SingleBlogPage() {
   const { slug } = useParams();
 

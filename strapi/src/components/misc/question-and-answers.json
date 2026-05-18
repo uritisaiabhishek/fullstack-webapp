@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_misc_question_and_answers",
+  "info": {
+    "displayName": "Question and Answers",
+    "icon": "message"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

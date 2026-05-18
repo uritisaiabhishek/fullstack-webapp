@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_sections_features_sections",
+  "info": {
+    "displayName": "Features section"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "isImageRight": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}

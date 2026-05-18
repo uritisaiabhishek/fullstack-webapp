@@ -1,4 +1,22 @@
+import { useEffect, useState } from "react";
+import api from "../lib/api";
+
 function ServicesPage() {
+  const [services, setServices] = useState([]);
+
+  useEffect(() => {
+    fetchServices();
+  }, []);
+
+  async function fetchServices() {
+    try {
+      const response = await api.get("/services");
+
+      setServices(response.data.data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
   return (
     <>
       {/* Hero Section */}
@@ -9,46 +27,32 @@ function ServicesPage() {
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">We offer a comprehensive range of services to help your business grow and succeed in the digital world.</p>
           </div>
           <div className="flex flex-wrap -m-4">
-            <div className="p-4 lg:w-1/2">
-              <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-                <img alt="service" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://dummyimage.com/200x200" />
-                <div className="flex-grow sm:pl-8">
-                  <h2 className="title-font font-medium text-lg text-gray-900">Web Development</h2>
-                  <h3 className="text-gray-500 mb-3">Custom Solutions</h3>
-                  <p className="mb-4">Building responsive, modern websites and web applications tailored to your specific business needs.</p>
+
+            {services.length === 0 && (
+              <div className="p-4 lg:w-1/2">
+                <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                  <div className="flex-grow sm:pl-8">
+                    <h2 className="title-font font-medium text-lg text-gray-900">No services available</h2>
+                    <p className="mb-4">Please check back later for our latest services.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="p-4 lg:w-1/2">
-              <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-                <img alt="service" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://dummyimage.com/201x201" />
-                <div className="flex-grow sm:pl-8">
-                  <h2 className="title-font font-medium text-lg text-gray-900">Mobile Development</h2>
-                  <h3 className="text-gray-500 mb-3">iOS & Android</h3>
-                  <p className="mb-4">Creating native and cross-platform mobile applications that deliver exceptional user experiences.</p>
+            )}
+            {services.map((service) => (
+                <div className="p-4 lg:w-1/2" key={service.slug}>
+                  <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                    <img alt="service" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://dummyimage.com/200x200" />
+                    <div className="flex-grow sm:pl-8">
+                      <h2 className="title-font font-medium text-lg text-gray-900">{service.title}</h2>
+                      <h3 className="text-gray-500 mb-3">{service.subtitle}</h3>
+                      <p className="mb-4">
+                        {service.description?.[0]?.children?.[0]?.text}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div className="p-4 lg:w-1/2">
-              <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-                <img alt="service" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://dummyimage.com/204x204" />
-                <div className="flex-grow sm:pl-8">
-                  <h2 className="title-font font-medium text-lg text-gray-900">UI/UX Design</h2>
-                  <h3 className="text-gray-500 mb-3">User-Centered</h3>
-                  <p className="mb-4">Designing intuitive and beautiful interfaces that enhance user engagement and satisfaction.</p>
-                </div>
-              </div>
-            </div>
-            <div className="p-4 lg:w-1/2">
-              <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-                <img alt="service" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://dummyimage.com/206x206" />
-                <div className="flex-grow sm:pl-8">
-                  <h2 className="title-font font-medium text-lg text-gray-900">Cloud Solutions</h2>
-                  <h3 className="text-gray-500 mb-3">Scalable Infrastructure</h3>
-                  <p className="mb-4">Providing cloud architecture and deployment services to ensure your applications scale seamlessly.</p>
-                </div>
-              </div>
-            </div>
+            ))}
+            
           </div>
         </div>
       </section>

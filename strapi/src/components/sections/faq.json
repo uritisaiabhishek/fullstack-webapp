@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_faqs",
+  "info": {
+    "displayName": "FAQ",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "QuestionAnswer": {
+      "type": "component",
+      "component": "misc.question-and-answers",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
