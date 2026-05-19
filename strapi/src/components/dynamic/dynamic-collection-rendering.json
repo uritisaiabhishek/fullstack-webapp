@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_dynamic_dynamic_collection_renderings",
+  "info": {
+    "displayName": "dynamicCollectionRendering",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string"
+    },
+    "blogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog.blog"
+    }
+  },
+  "config": {}
+}

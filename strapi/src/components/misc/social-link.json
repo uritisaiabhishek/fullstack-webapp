@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_misc_social_links",
+  "info": {
+    "displayName": "social-link",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "socialLink": {
+      "type": "enumeration",
+      "enum": [
+        "Facebook",
+        "Instagram",
+        "Linkedin"
+      ]
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_misc_price_packages",
+  "info": {
+    "displayName": "pricePackage"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "packageContent": {
+      "type": "blocks"
+    },
+    "packagePrice": {
+      "type": "string"
+    },
+    "packageOfferPrice": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
